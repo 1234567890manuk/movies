@@ -12,7 +12,7 @@ from typing import Any
 from database.users_chats_db import db
 
 
-logger = logging.getLogger(name)
+logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 BANNED = {}
@@ -114,8 +114,7 @@ async def get_poster(query, bulk=False, id=False, file=None):
         "director": list_to_str(movie.get("director")),
         "writer":list_to_str(movie.get("writer")),
         "producer":list_to_str(movie.get("producer")),
-
-"composer":list_to_str(movie.get("composer")) ,
+        "composer":list_to_str(movie.get("composer")) ,
         "cinematographer":list_to_str(movie.get("cinematographer")),
         "music_team": list_to_str(movie.get("music department")),
         "distributors": list_to_str(movie.get("distributors")),
